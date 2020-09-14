@@ -1,8 +1,21 @@
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 
 public class DashboardPage {
-    public void clickAdmin(WebDriver driver) {
-    }
+
+         DashboardPage(WebDriver driver)
+        {
+            PageFactory.initElements(driver, this);
+        }
+
+        @FindBy (xpath = "//b[contains(.,'Admin')]")
+    WebElement addBtn;
+        public void clickAdmin(WebDriver driver)
+        {
+        addBtn.click();
+        }
 
 
 }

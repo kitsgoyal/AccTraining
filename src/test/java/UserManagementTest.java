@@ -23,8 +23,11 @@ public class UserManagementTest {
 //         driver.findElement(By.id("btnLogin")).click();
         //Login
 
-        DashboardPage dash= new DashboardPage();
+        DashboardPage dash= new DashboardPage(driver);
         dash.clickAdmin(driver);
+
+        Admin admin=new Admin(driver);
+        admin.clickAddBtn(driver);
 
 //         driver.findElement(By.id("btnAdd")).click();
 //
